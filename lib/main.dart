@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'pages/home.dart';
 
@@ -10,11 +11,13 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return ProviderScope(
+      child: MaterialApp(
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const Home(),
       ),
-      home: const Home(),
     );
   }
 }
