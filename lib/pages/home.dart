@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:live_streaming/pages/director.dart';
+import 'package:live_streaming/pages/participant.dart';
 
 class Home extends StatelessWidget {
   static const routeName = 'home';
@@ -25,7 +27,7 @@ class Home extends StatelessWidget {
                 ],
               ),
               onPressed: () {
-                //take us to participant
+                Navigator.of(context).pushNamed(Participant.routeName);
               },
             ),
             TextButton(
@@ -40,7 +42,7 @@ class Home extends StatelessWidget {
                 ],
               ),
               onPressed: () {
-                //take us to director
+                Navigator.of(context).pushNamed(Director.routeName);
               },
             ),
           ],
